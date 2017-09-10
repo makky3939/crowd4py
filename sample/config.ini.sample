@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 [oahu]
+USERID =
+PASSWORD =
 API_ROOT = http://
-REQUESTER =
-GROUP_ID  =
-USER_TOKEN = ""
+REQUESTER = 00
+GROUP_ID  = 00
+USER_TOKEN = xxx
+
 [crowd4u]
-USERID = ""
-PASSWORD = ""
-API_ROOT = ""
-REQUESTER = ""
-GROUP_ID  = ""
-USER_TOKEN = ""
+API_ROOT = https://
+REQUESTER = 00
+GROUP_ID  = 00
+USER_TOKEN = xxx
+
 [project]
-PROJECT_NAME =
-RELATION_NAME =
+ID = 00
+PROJECT_NAME = replace_me
+RELATION_NAME = replace_me
