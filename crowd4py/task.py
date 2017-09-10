@@ -42,5 +42,21 @@ class Task:
         post_url = "http:" + etroot.find('post_url').text
         return post_url
 
+    @staticmethod
+    def get_post_url_from_html(etroot: lxml.etree) -> str:
+        form = etroot.xpath('//form')[0]
+        url = form.attrib['action']
+        return url
 
-
+    @staticmethod
+    def get_priority_params_from_html(etroot: lxml.etree) -> dict:
+        keys = []
+        values = []
+        for child in etroot.iter('input'):
+            try:
+                keys.append(child.attrib['name'])
+                values.append(child.attrib['value'])
+            except:
+                pass
+        d = dict(zip(keys, values))
+        return d
